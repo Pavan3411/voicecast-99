@@ -10,7 +10,7 @@ export default defineSchema({
         audioStorageId: v.optional(v.id('_storage')),
         imageUrl: v.optional(v.string()),
         imageStorageId: v.optional(v.id('_storage')),
-        author: v.string(),
+        author: v.union(v.string(), v.null()),
         authorId: v.string(),
         authorImageUrl: v.string(),
         voicePrompt: v.string(),
@@ -26,6 +26,6 @@ export default defineSchema({
         email: v.string(),
         imageUrl: v.string(),
         clerkId: v.string(),
-        name: v.string(),
+        name: v.union(v.string(), v.null()),
     })
 })

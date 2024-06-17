@@ -4,9 +4,6 @@ import { useQuery } from "convex/react";
 import { api } from "@/convex/_generated/api";
 import LoaderSpinner from '@/components/LoaderSpinner';
 
-
-
-
 const Home = () => {
   const trendingPodcasts = useQuery(api.podcasts.getTrendingPodcasts);
 
@@ -23,7 +20,7 @@ const Home = () => {
       }) =>  (
         <Podcastcard
         key={_id}
-        imgUrl={imageUrl as string}
+        imgUrl={imageUrl}
         title={podcastTitle}
         description = {podcastDescription}
         podcastId= {_id}
